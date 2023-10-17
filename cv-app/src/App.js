@@ -8,12 +8,6 @@ import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
-    // <Router>
-    //   <Routes>
-    //     
-    //     {/* Add routes for other components if needed */}
-    //   </Routes>
-    // </Router>
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home />} />
