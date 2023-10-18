@@ -1,9 +1,12 @@
-import React from 'react';
+import React from "react";
+import Navigation from "../components/Navigation";
+import MainContent from "../components/MainContent";
 
 function Inner() {
   return (
-    <div>
-      <h1>Inner Page</h1>
+    <div className="flex">
+      <Navigation />
+      <MainContent />
     </div>
   );
 }
