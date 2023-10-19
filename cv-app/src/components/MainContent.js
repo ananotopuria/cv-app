@@ -3,6 +3,9 @@ import Box from './Box';
 import Timeline from '../components/Timeline';
 import Expertise from '../components/Expertise';
 import Portfolio from '../components/Portfolio';
+import Feedback from '../components/Feedback';
+import userimage from '../assets/images/userimage.png';
+
 
 const MainContent = ({ isOpen }) => {
   const mainContentClasses = `transition-margin ${
@@ -63,9 +66,33 @@ const MainContent = ({ isOpen }) => {
       <Portfolio />
       <Box title="Contact" />
       <Box title="Feedback" />
+      <Feedback
+          data={[
+            {
+              feedback:
+                'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor, Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor, Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  ',
+              reporter: {
+                photoUrl: userimage,
+                name: 'John Doe Programer',
+                citeUrl: 'https://www.citeexample.com',
+              },
+            },
+            {
+              feedback:
+                'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor, Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor, Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  ',
+              reporter: {
+                photoUrl: userimage,
+                name: 'John Doe Programer',
+                citeUrl: 'https://www.citeexample.com',
+              },
+            },
+          ]}
+          id="feedback"
+          
+        />
+
     </div>
   );
 };
 
 export default MainContent;
-
