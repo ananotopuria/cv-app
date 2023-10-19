@@ -1,6 +1,8 @@
 import React from 'react';
 import Box from './Box';
 import Timeline from '../components/Timeline';
+import Expertise from '../components/Expertise';
+import Portfolio from '../components/Portfolio';
 
 const MainContent = ({ isOpen }) => {
   const mainContentClasses = `transition-margin ${
@@ -32,6 +34,35 @@ const MainContent = ({ isOpen }) => {
             },
           ]}
         />
+        <Box title="Experience" />
+        <Expertise
+          id="experience"
+          data={[
+            {
+              date: '2020 – 2022',
+              info: {
+                company: 'Adjara group',
+                job: 'UX/UI Designer',
+                description:
+                  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.',
+              },
+            },
+            {
+              date: '2023',
+              info: {
+                company: 'Google',
+                job: 'Front-End Developer',
+                description:
+                  'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.',
+              },
+            },
+          ]}
+        />
+      <Box title="Skills" />
+      <Box title="Portfolio" />
+      <Portfolio />
+      <Box title="Contact" />
+      <Box title="Feedback" />
     </div>
   );
 };
