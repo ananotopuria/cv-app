@@ -1,7 +1,17 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faGraduationCap, faPencil, faMagicWandSparkles, faSuitcase, faAddressBook, faComment } from "@fortawesome/free-solid-svg-icons";
+import {
+  faUser,
+  faGraduationCap,
+  faPencil,
+  faMagicWandSparkles,
+  faSuitcase,
+  faAddressBook,
+  faComment,
+} from "@fortawesome/free-solid-svg-icons";
 import MainContent from "./MainContent";
+import PhotoBox from "./PhotoBox";
+import avatar from "../assets/images/avatar.jpg";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,10 +23,25 @@ const Navigation = () => {
   return (
     <div className="flex">
       <div
-        className={`h-screen sm:w-[10rem] md:w-[10rem]  bg-gray-200 ${
+        className={`h-screen bg-gray-200 sm:w-[10rem]  md:w-[10rem] ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out`}
       >
+        <div className="flex w-16 flex-col items-center">
+          <PhotoBox
+            avatar={avatar}
+            name="Anano Topuria"
+            nameFontSize="1rem" 
+            responsive={true} 
+            photoSize={{
+              sm: "hidden",
+              md: "20",
+              lg: "20",
+              xl: "20",
+              xxl: "20",
+            }}
+          />
+        </div>
         <div className="p-4">
           <ul>
             <li className="hidden sm:block">

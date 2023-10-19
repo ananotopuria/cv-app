@@ -9,28 +9,32 @@ function Home() {
     backgroundImage: `url(${background})`,
     overlay: "bg-black bg-opacity-60",
   };
-  const userData = {
-    name: "Anano Topuria",
-    title: "Programmer. Creative. Innovator",
-    description: "I'm a passionate and creative frontend developer with a strong foundation in HTML, CSS, and JavaScript. I excel at translating design concepts into responsive web applications that captivate users. My portfolio is a testament to my ability to bring ideas to life. I'm committed to continuous growth and am dedicated to enhancing my skills further.",
-    avatar: avatar,
-  };
+
   return (
     <div className="h-screen bg-cover bg-top" style={backgroundStyle}>
       <div className={`absolute inset-0 ${backgroundStyle.overlay}`}>
-        <div className="h-screen flex flex-col justify-center gap-20 items-center">
-
-        <PhotoBox
-          name={userData.name}
-          title={userData.title}
-          description={userData.description}
-          avatar={userData.avatar}
-        />
-
-        <Link to="/inner" className="bg-[#222935] text-[#fff] px-5 py-3 rounded-lg">
-          Know More
-        </Link>
-
+        <div className="flex h-screen flex-col items-center justify-center gap-20">
+          <PhotoBox
+            name="Anano Topuria"
+            title="Title"
+            description="Description goes here."
+            avatar={avatar}
+            nameFontSize="1rem" 
+            responsive={true}
+            photoSize={{
+              sm: "32",
+              md: "48",
+              lg: "64",
+              xl: "80",
+              xxl: "96",
+            }}
+          />
+          <Link
+            to="/inner"
+            className="rounded-lg bg-[#222935] px-5 py-3 text-[#fff]"
+          >
+            Know More
+          </Link>
         </div>
       </div>
     </div>
