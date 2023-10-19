@@ -5,6 +5,7 @@ import Expertise from '../components/Expertise';
 import Portfolio from '../components/Portfolio';
 import Feedback from '../components/Feedback';
 import userimage from '../assets/images/userimage.png';
+import Address from '../components/Address';
 
 
 const MainContent = ({ isOpen }) => {
@@ -65,6 +66,7 @@ const MainContent = ({ isOpen }) => {
       <Box title="Portfolio" />
       <Portfolio />
       <Box title="Contact" />
+      <Address id="contacts"/>
       <Box title="Feedback" />
       <Feedback
           data={[
