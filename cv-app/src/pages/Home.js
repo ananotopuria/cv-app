@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom";
-import React from "react";
 import PhotoBox from "../components/PhotoBox";
 import avatar from "../assets/images/avatar.jpg";
 import background from "../assets/images/background.png";
+import Button from "../components/Button";
 
 function Home() {
   const backgroundStyle = {
     backgroundImage: `url(${background})`,
     overlay: "bg-black bg-opacity-60",
   };
+
 
   return (
     <div className="h-screen bg-cover bg-top" style={backgroundStyle}>
@@ -19,7 +20,7 @@ function Home() {
             title="Programmer. Creative. Innovator"
             description="I'm a passionate and creative frontend developer with a strong foundation in HTML, CSS, and JavaScript. I excel at translating design concepts into responsive web applications that captivate users. My portfolio is a testament to my ability to bring ideas to life. I'm committed to continuous growth and am dedicated to enhancing my skills further."
             avatar={avatar}
-            nameFontSize="3rem" 
+            nameFontSize="3rem"
             responsive={true}
             photoSize={{
               sm: "48",
@@ -29,11 +30,8 @@ function Home() {
               xxl: "48",
             }}
           />
-          <Link
-            to="/inner"
-            className="rounded-lg bg-[#222935] px-5 py-3 text-[#fff]"
-          >
-            Know More
+          <Link to="/inner">
+            <Button>Know More</Button>
           </Link>
         </div>
       </div>

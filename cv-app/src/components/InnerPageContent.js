@@ -12,9 +12,9 @@ const InnerPageContent = () => {
   };
 
   return (
-    <div className="flex ">
+    <div className="flex">
       <div
-        className={`w-1/4 h-full bg-[#222935] text-[#667081] sm:w-[10rem]  md:w-[15rem] ${
+        className={`h-full bg-[#222935] text-[#667081] sm:w-[10rem]  md:w-[15rem] ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out`}
       >

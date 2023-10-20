@@ -11,7 +11,7 @@ import Address from '../components/Address';
 const MainContent = ({ isOpen }) => {
   const mainContentClasses = `transition-margin ${
     isOpen
-      ? "-ml-4 sm:ml-[0] md:ml-[0] lg:ml-[0]"
+      ? "-ml-4 sm:ml-[-6rem] md:ml-[-8rem] lg:ml-[-10rem]"
       : "ml-10 sm:ml-8 md:ml-10 lg:ml-10"
   }`;
   return (
