@@ -31,7 +31,7 @@ function Home() {
             }}
           />
           <Link to="/inner">
-            <Button>Know More</Button>
+            <Button >Know More</Button>
           </Link>
         </div>
       </div>

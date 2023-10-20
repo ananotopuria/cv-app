@@ -3,9 +3,10 @@ import MainContent from "./MainContent";
 import PhotoBox from "./PhotoBox";
 import avatar from "../assets/images/avatar.jpg";
 import Nav  from "./Nav";
+import ScrollToTopButton from "./ScrollToTopButton";
 
 const InnerPageContent = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -46,6 +47,7 @@ const InnerPageContent = () => {
         </button>
       </div>
       <MainContent isOpen={!isOpen} />
+      <ScrollToTopButton />
     </div>
   );
 };

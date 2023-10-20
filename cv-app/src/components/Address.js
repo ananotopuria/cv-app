@@ -17,67 +17,67 @@ const Address = forwardRef((props, ref) => {
   };
 
   return (
-    <div className="address text-gray-900">
-      <div className="email mb-4" onClick={handleEmailClick}>
-        <span className="font-semibold">
-          <FontAwesomeIcon icon={faEnvelope} className="text-green-500" />
-          Email:
+    <div className="address text-gray-900 ">
+      <div className="email mb-4 flex flex-col" onClick={handleEmailClick}>
+        <span className="font-semibold  ">
+          <FontAwesomeIcon icon={faEnvelope} className="text-[#26c17e] text-2xl" />
+          <span className="ml-3 text-[#222935]">Email:</span>
         </span>
-        <a href={`mailto:${emailAddress}`} className="ml-2">
+        <a href={`mailto:${emailAddress}`} className=" text-[#667081] ml-7">
           {emailAddress}
         </a>
       </div>
-      <div className="phone mb-4">
+      <div className="phone mb-4 flex flex-col">
         <span className="font-semibold">
-          <FontAwesomeIcon icon={faPhone} className="text-green-500" />
-          Phone:
+          <FontAwesomeIcon icon={faPhone} className="text-[#26c17e] text-2xl" />
+          <span className="ml-3 text-[#222935]">Phone:</span>
         </span>
-        <a href={`tel:${phoneNumber}`} className="ml-2">
+        <a href={`tel:${phoneNumber}`} className="ml-7 text-[#667081]">
           {phoneNumber}
         </a>
       </div>
-      <div className="linkedin mb-4">
+      <div className="linkedin mb-4 flex flex-col">
         <span className="font-semibold">
-          <FontAwesomeIcon icon={faLinkedinIn}  className="text-green-500" />
-          LinkedIn:
+          <FontAwesomeIcon icon={faLinkedinIn}  className="text-[#26c17e] text-2xl" />
+          <span className="ml-3 text-[#222935]">LinkedIn:</span>
         </span>
-        <a href={linkedinLink} className="ml-2">
+        <a href={linkedinLink} className="ml-7 text-[#667081]">
           {linkedinLink}
         </a>
       </div>
-      <div className="facebook mb-4">
+      <div className="facebook mb-4 flex flex-col">
         <span className="font-semibold">
-          <FontAwesomeIcon icon={faFacebook} className="text-green-500"/>
-          Facebook:
+          <FontAwesomeIcon icon={faFacebook} className="text-[#26c17e] text-2xl"/>
+          <span className="ml-3 text-[#222935]">Facebook:</span>
         </span>
-        <a href={facebookLink} className="ml-2">
+        <a href={facebookLink} className="ml-7 text-[#667081]">
           {facebookLink}
         </a>
       </div>
-      <div className="instagram">
+      <div className="instagram mb-4 flex flex-col">
         <span className="font-semibold">
-          <FontAwesomeIcon icon={faInstagram} className="text-green-500" />
-          Instagram:
+          <FontAwesomeIcon icon={faInstagram} className="text-[#26c17e] text-2xl" />
+          <span className="ml-3 text-[#222935]">Instagram:</span>
         </span>
-        <a href={instagramLink} className="ml-2">
+        <a href={instagramLink} className="ml-7 text-[#667081]">
           {instagramLink}
         </a>
       </div>
-      <div className="github">
+      <div className="github mb-4 flex flex-col">
         <span className="font-semibold">
-          <FontAwesomeIcon icon={faGithub} className="text-green-500" />
-          GitHub:
+          <FontAwesomeIcon icon={faGithub} className="text-[#26c17e] text-2xl" />
+          <span className="ml-3 text-[#222935]">GitHub:</span>
         </span>
-        <a href={githubLink} className="ml-2">
+        <a href={githubLink} className="ml-7 text-[#667081]">
           {githubLink}
         </a>
       </div>
-      <div className="gitlab">
+      <div className="gitlab mb-4 flex flex-col">
         <span className="font-semibold">
-          <FontAwesomeIcon icon={faGitlab} className="text-green-500" />
-          GitLab:
+          <FontAwesomeIcon icon={faGitlab} className="text-[#26c17e] text-2xl" />
+          <span className="ml-3 text-[#222935]">GitLab:</span>
         </span>
-        <a href={gitlabLink} className="ml-2">
+        <a href={gitlabLink} className="ml-7 text-[#667081]">
           {gitlabLink}
         </a>
       </div>
