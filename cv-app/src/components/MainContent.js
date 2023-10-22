@@ -6,6 +6,7 @@ import Portfolio from "../components/Portfolio";
 import Feedback from "../components/Feedback";
 import userimage from "../assets/images/userimage.png";
 import Address from "../components/Address";
+import Skills from "./Skills";
 
 
 const MainContent = ({ isOpen }) => {
@@ -73,7 +74,7 @@ const MainContent = ({ isOpen }) => {
         />
       </div>
       <div id="skills">
-        <Box title="Skills" />
+        <Skills />
       </div>
       <div id="portfolio">
         <Box title="Portfolio" />

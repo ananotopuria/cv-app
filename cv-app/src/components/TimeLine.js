@@ -1,29 +1,55 @@
-import React, { forwardRef } from 'react';
+import { useDispatch, useSelector } from "react-redux";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRotate } from '@fortawesome/free-solid-svg-icons';
+import Info from "./Info";
+import { useEffect } from "react";
+import { fetchEducation } from "../features/educationSlice";
 
-const Timeline = forwardRef(({ data }, ref) => {
-  return (
-    <div ref={ref} className="timeline h-[50vh] max-h-[80vh] overflow-y-auto">
-      <ul className="timeline-list relative p-4">
-        {data.map((event, index) => (
-          <li className="mb-5 flex items-start" key={index}>
-            <div className="flex flex-col items-center">
-              <div className="timeline-year font-bold p-2 rounded-full text-center">
-                {event.date}
-              </div>
-              <div className="timeline-stick w-1 bg-[#26c17e] my-4 h-16" />
+function TimeLine() {
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(fetchEducation());
+    }, [dispatch]);
+
+    const data = useSelector((state) => state.education.data)
+    const status = useSelector((state) => state.education.status);
+
+    if (status === 'loading') {
+        return(
+            <div className="py-[7rem]">
+                <FontAwesomeIcon className="text-[#26c17e] py-75 w-full animate-spin" icon={faRotate} size="xl" />
             </div>
-            <div className="timeline-event relative w-full">
-              <div className="w-full bg-[#EEE] p-4">
-                <h3 className="text-sm mb-2 font-semibold">{event.title}</h3>
-                <p className="text-[#222935] text-sm">{event.text}</p>
-              </div>
+        )
+    } else if (status === 'success') {
+        return(
+            <div className="h-[30vh] max-h-[80vh] overflow-y-auto pr-15">
+                <ul>
+                    {data.educations.map((edu, index) => (
+                        <li key={index} className="flex flex-">
+                            <div className="font-semibold mr-35 bg-white relative h-25 ">
+                                {edu["date"]}
+                                <div className=" w-1 bg-[#26c17e] my-4 mx-4 h-16" />
+                            </div>
+                            <div>
+                                <Info text={edu["description"]}>
+                                    <h3 className="bg-[#EEE] ml-[1rem] mr-[2rem]">{edu["title"]}</h3>
+                                </Info>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
             </div>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-});
+        )
+    } else {
+        return(
+            <div className="text-red-500 py-75 w-full text-center">
+                Something went wrong, please review your server connection!
+            </div>
+        )
+    }
 
-export default Timeline;
 
+}
+
+export default TimeLine;

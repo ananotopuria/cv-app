@@ -3,17 +3,29 @@ import ReactDOM from 'react-dom/client';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Provider } from 'react-redux';
+import store from './app/store';
+
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import server from './services/server';
+
+server();
 
 library.add(faBars, faTimes);
 
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>
+// );
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>
+  </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
