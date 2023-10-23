@@ -20,19 +20,7 @@ const InnerPageContent = () => {
         } transition-transform duration-300 ease-in-out`}
       >
         <div className="flex w-16 flex-col items-center justify-center  md:ml-10 sm:ml-8 mt-10">
-          <PhotoBox
-            avatar={avatar}
-            name="Anano Topuria"
-            nameFontSize="1rem" 
-            responsive={true} 
-            photoSize={{
-              sm: "hidden",
-              md: "20",
-              lg: "20",
-              xl: "20",
-              xxl: "20",
-            }}
-          />
+        <PhotoBox imgSrc={avatar} fullName="Anano Topuria" />
         </div>
         <Nav/>
         <button

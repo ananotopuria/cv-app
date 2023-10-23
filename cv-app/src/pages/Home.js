@@ -10,29 +10,22 @@ function Home() {
     overlay: "bg-black bg-opacity-60",
   };
 
-
   return (
     <div className="h-screen bg-cover bg-top" style={backgroundStyle}>
       <div className={`absolute inset-0 ${backgroundStyle.overlay}`}>
-        <div className="flex h-screen flex-col items-center justify-center gap-5">
+        {/* <div className="flex h-screen flex-col items-center justify-center gap-5"> */}
+        <div className="">
           <PhotoBox
-            name="Anano Topuria"
-            title="Programmer. Creative. Innovator"
+            imgSrc={avatar}
+            fullName="Anano Topuria"
+            position="Programmer. Creative. Innovator"
             description="I'm a passionate and creative frontend developer with a strong foundation in HTML, CSS, and JavaScript. I excel at translating design concepts into responsive web applications that captivate users. My portfolio is a testament to my ability to bring ideas to life. I'm committed to continuous growth and am dedicated to enhancing my skills further."
-            avatar={avatar}
-            nameFontSize="3rem"
-            responsive={true}
-            photoSize={{
-              sm: "48",
-              md: "48",
-              lg: "48",
-              xl: "48",
-              xxl: "48",
-            }}
-          />
-          <Link to="/inner">
-            <Button >Know More</Button>
-          </Link>
+
+          >
+            <Link to="/inner">
+              <Button>Know More</Button>
+            </Link>
+          </PhotoBox>
         </div>
       </div>
     </div>
