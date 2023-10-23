@@ -13,7 +13,6 @@ function Home() {
   return (
     <div className="h-screen bg-cover bg-top" style={backgroundStyle}>
       <div className={`absolute inset-0 ${backgroundStyle.overlay}`}>
-        {/* <div className="flex h-screen flex-col items-center justify-center gap-5"> */}
         <div className="">
           <PhotoBox
             imgSrc={avatar}
