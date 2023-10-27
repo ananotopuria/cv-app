@@ -70,9 +70,8 @@ function Skills() {
                 <div className="p-6 mt-4">
                 <label htmlFor="name" className="mr-[2rem]">Skill Name:</label>
                 <input
-                    // className={formik.touched.name && formik.errors.name ? 'border-1 border-red-500' : ''}
                     className={`${
-                        formik.touched.name && formik.errors.name ? 'border-1 border-red-500' : ''
+                        formik.touched.name && formik.errors.name ? 'border border-1 border-red-500' : 'border'
                     } w-1/4 p-2 rounded-md`}
                     id="name"
                     name="name"
@@ -96,6 +95,8 @@ function Skills() {
                     } w-1/4 p-2 rounded-md`}
                     id="range"
                     name="range"
+
+
                     type="text"
                     onChange={formik.handleChange}
                     onBlur={formik.handleBlur}
