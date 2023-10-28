@@ -1,3 +1,4 @@
+
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from 'axios';
 
@@ -30,8 +31,6 @@ const educationSlice = createSlice({
         })
     },
 });
-
-// export const { fetchEducation, fetchEducationFailure, fetchEducationSuccess } = educationSlice.actions;
 
 const educationReducer = educationSlice.reducer;
 export default educationReducer;

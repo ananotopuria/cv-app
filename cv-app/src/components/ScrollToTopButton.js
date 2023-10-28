@@ -12,7 +12,7 @@ function ScrollToTopButton() {
         duration={500}
         className="fixed bottom-0 right-4 bg-[#222935] p-2 rounded text-white cursor-pointer"
       >
-        <FontAwesomeIcon icon={faChevronUp} />
+        <FontAwesomeIcon icon={faChevronUp} data-testid="up-chevron-icon" />
       </Link>
     );
   }
